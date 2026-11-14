@@ -1,0 +1,333 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Azzy — Backend Engineer, Server Infrastructure">
+  <defs>
+    <linearGradient id="space" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#03040B"/>
+      <stop offset=".55" stop-color="#080A1C"/>
+      <stop offset="1" stop-color="#0C0820"/>
+    </linearGradient>
+    <radialGradient id="neb1" cx="24%" cy="40%" r="40%">
+      <stop offset="0" stop-color="#FF8A3D" stop-opacity=".30"/>
+      <stop offset=".45" stop-color="#C2410C" stop-opacity=".10"/>
+      <stop offset="1" stop-color="#C2410C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="neb2" cx="58%" cy="75%" r="38%">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="neb3" cx="8%" cy="95%" r="30%">
+      <stop offset="0" stop-color="#2563EB" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#FFC38A"/>
+      <stop offset=".35" stop-color="#FF8A3D"/>
+      <stop offset=".75" stop-color="#9A3412"/>
+      <stop offset="1" stop-color="#2A0E05"/>
+    </radialGradient>
+    <radialGradient id="atmo" cx="50%" cy="50%" r="50%">
+      <stop offset=".78" stop-color="#FF8A3D" stop-opacity="0"/>
+      <stop offset=".86" stop-color="#FF8A3D" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#FF8A3D" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFC38A" stop-opacity="0"/>
+      <stop offset=".3" stop-color="#FFC38A" stop-opacity=".7"/>
+      <stop offset=".7" stop-color="#FF8A3D" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#FF8A3D" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD9B0"/>
+      <stop offset=".45" stop-color="#FF8A3D"/>
+      <stop offset="1" stop-color="#E8590C"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#FFFFFF" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".95"/>
+    </linearGradient>
+    <clipPath id="frame"><rect width="1200" height="320" rx="16"/></clipPath>
+    <clipPath id="nameclip"><text x="72" y="150" font-size="92" font-weight="800" letter-spacing="6" class="sans">AZZY</text></clipPath>
+    <clipPath id="planetclip"><circle cx="0" cy="0" r="96"/></clipPath>
+  </defs>
+
+  <style>
+    .sans { font-family: 'Segoe UI', Inter, 'Helvetica Neue', Arial, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', Consolas, 'SFMono-Regular', Menlo, monospace; }
+    @keyframes tw { 0%, 100% { opacity: .15; } 50% { opacity: 1; } }
+    @keyframes flare { 0%, 100% { opacity: .3; transform: scale(.7); } 50% { opacity: 1; transform: scale(1.15); } }
+    @keyframes shoot { 0% { transform: translate(0,0); opacity: 0; } 3% { opacity: 1; } 12% { transform: translate(-520px,210px); opacity: 0; } 100% { transform: translate(-520px,210px); opacity: 0; } }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes drift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes shine { 0% { transform: translateX(-420px); } 60%, 100% { transform: translateX(520px); } }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    @keyframes reveal { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+    @keyframes show { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes pulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+    .tw { animation: tw 4s ease-in-out infinite; }
+    .flare { transform-box: fill-box; transform-origin: center; animation: flare 3.5s ease-in-out infinite; }
+    .s1 { animation: shoot 9s linear 2s infinite; }
+    .s2 { animation: shoot 13s linear 7s infinite; }
+    .orbit { transform-origin: 0 0; animation: orbit 14s linear infinite; }
+    .drift { animation: drift 8s ease-in-out infinite; }
+    .shine { animation: shine 6s ease-in-out 1.2s infinite; }
+    .r1 { animation: rise .8s ease-out both; }
+    .r2 { animation: rise .8s ease-out .25s both; }
+    .r3 { animation: rise .8s ease-out .5s both; }
+    .r4 { animation: rise .8s ease-out .75s both; }
+    .o { animation-name: show; animation-duration: .01s; animation-fill-mode: both; }
+    .cv { transform-box: fill-box; transform-origin: right center; }
+    .cur { animation: blink 1s steps(1) infinite; }
+    .dot { animation: pulse 2.4s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .tw, .flare, .orbit, .drift, .shine, .r1, .r2, .r3, .r4, .o, .cur, .dot { animation: none !important; }
+      .s1, .s2, .cv { display: none; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="320" fill="url(#space)"/>
+    <rect width="1200" height="320" fill="url(#neb1)"/>
+    <rect width="1200" height="320" fill="url(#neb2)"/>
+    <rect width="1200" height="320" fill="url(#neb3)"/>
+    <circle cx="767" cy="8" r="0.7" fill="#FFFFFF" opacity="0.48"/>
+    <circle class="tw" style="animation-duration:2.8s;animation-delay:1.2s" cx="884" cy="217" r="0.9" fill="#FFFFFF" opacity="0.70"/>
+    <circle class="tw" style="animation-duration:3.5s;animation-delay:4.3s" cx="722" cy="180" r="1.1" fill="#FFE8C2" opacity="0.60"/>
+    <circle cx="911" cy="51" r="0.8" fill="#FFFFFF" opacity="0.52"/>
+    <circle cx="258" cy="244" r="0.5" fill="#FFFFFF" opacity="0.58"/>
+    <circle cx="431" cy="110" r="0.7" fill="#FFFFFF" opacity="0.79"/>
+    <circle cx="643" cy="311" r="0.8" fill="#FFFFFF" opacity="0.68"/>
+    <circle cx="995" cy="198" r="1.4" fill="#FFFFFF" opacity="0.70"/>
+    <circle cx="55" cy="73" r="0.7" fill="#FFFFFF" opacity="0.86"/>
+    <circle cx="1040" cy="122" r="0.8" fill="#FFFFFF" opacity="0.45"/>
+    <circle class="tw" style="animation-duration:5.1s;animation-delay:0.8s" cx="426" cy="214" r="1.1" fill="#FFFFFF" opacity="0.72"/>
+    <circle class="tw" style="animation-duration:5.2s;animation-delay:0.3s" cx="455" cy="317" r="1.1" fill="#FFE8C2" opacity="0.48"/>
+    <circle cx="986" cy="258" r="0.8" fill="#FFFFFF" opacity="0.39"/>
+    <circle class="tw" style="animation-duration:5.6s;animation-delay:3.2s" cx="1096" cy="181" r="1.1" fill="#FFFFFF" opacity="0.48"/>
+    <circle cx="171" cy="45" r="1.1" fill="#FFE8C2" opacity="0.67"/>
+    <circle cx="514" cy="187" r="0.7" fill="#FFFFFF" opacity="0.95"/>
+    <circle class="tw" style="animation-duration:3.1s;animation-delay:3.4s" cx="166" cy="158" r="1.4" fill="#FFFFFF" opacity="0.87"/>
+    <circle cx="716" cy="123" r="0.9" fill="#BFD4FF" opacity="0.67"/>
+    <circle class="tw" style="animation-duration:3.4s;animation-delay:3.2s" cx="1033" cy="4" r="1.1" fill="#FFFFFF" opacity="0.76"/>
+    <circle cx="134" cy="139" r="0.8" fill="#FFFFFF" opacity="0.92"/>
+    <circle class="tw" style="animation-duration:4.7s;animation-delay:4.2s" cx="1051" cy="84" r="0.9" fill="#FFFFFF" opacity="0.65"/>
+    <circle cx="609" cy="64" r="0.7" fill="#FFFFFF" opacity="0.67"/>
+    <circle cx="934" cy="170" r="0.5" fill="#FFFFFF" opacity="0.64"/>
+    <circle class="tw" style="animation-duration:4.5s;animation-delay:0.4s" cx="134" cy="116" r="1.4" fill="#FFFFFF" opacity="0.49"/>
+    <circle class="tw" style="animation-duration:4.2s;animation-delay:2.7s" cx="878" cy="261" r="1.4" fill="#FFE8C2" opacity="0.81"/>
+    <circle cx="318" cy="279" r="0.8" fill="#FFFFFF" opacity="0.91"/>
+    <circle cx="906" cy="221" r="1.1" fill="#FFFFFF" opacity="0.59"/>
+    <circle cx="448" cy="288" r="0.8" fill="#FFFFFF" opacity="0.50"/>
+    <circle class="tw" style="animation-duration:5.0s;animation-delay:0.3s" cx="77" cy="7" r="0.9" fill="#FFFFFF" opacity="0.70"/>
+    <circle cx="81" cy="10" r="0.7" fill="#FFFFFF" opacity="0.66"/>
+    <circle cx="334" cy="155" r="0.9" fill="#FFFFFF" opacity="0.78"/>
+    <circle cx="691" cy="78" r="0.8" fill="#FFD9B8" opacity="0.46"/>
+    <circle cx="116" cy="138" r="0.8" fill="#FFD9B8" opacity="0.63"/>
+    <circle cx="875" cy="215" r="1.1" fill="#FFFFFF" opacity="0.39"/>
+    <circle cx="961" cy="35" r="0.6" fill="#FFFFFF" opacity="0.67"/>
+    <circle cx="168" cy="59" r="0.8" fill="#FFFFFF" opacity="0.87"/>
+    <circle cx="90" cy="259" r="1.4" fill="#FFE8C2" opacity="0.41"/>
+    <circle cx="649" cy="5" r="0.5" fill="#FFFFFF" opacity="0.45"/>
+    <circle cx="583" cy="68" r="0.8" fill="#FFFFFF" opacity="0.45"/>
+    <circle cx="3" cy="125" r="1.4" fill="#BFD4FF" opacity="0.52"/>
+    <circle class="tw" style="animation-duration:5.9s;animation-delay:2.9s" cx="877" cy="251" r="1.1" fill="#BFD4FF" opacity="0.44"/>
+    <circle cx="651" cy="239" r="0.5" fill="#FFFFFF" opacity="0.70"/>
+    <circle cx="603" cy="273" r="0.6" fill="#FFFFFF" opacity="0.93"/>
+    <circle class="tw" style="animation-duration:2.9s;animation-delay:4.5s" cx="96" cy="59" r="0.9" fill="#FFFFFF" opacity="0.76"/>
+    <circle class="tw" style="animation-duration:4.3s;animation-delay:4.7s" cx="295" cy="190" r="0.9" fill="#FFFFFF" opacity="0.60"/>
+    <circle cx="245" cy="229" r="0.6" fill="#FFFFFF" opacity="0.59"/>
+    <circle cx="806" cy="96" r="0.7" fill="#FFFFFF" opacity="0.36"/>
+    <circle cx="745" cy="180" r="0.5" fill="#FFFFFF" opacity="0.67"/>
+    <circle cx="607" cy="42" r="0.7" fill="#FFFFFF" opacity="0.88"/>
+    <circle cx="443" cy="50" r="1.4" fill="#FFE8C2" opacity="0.77"/>
+    <circle cx="1185" cy="209" r="0.5" fill="#FFE8C2" opacity="0.53"/>
+    <circle cx="796" cy="300" r="0.6" fill="#FFFFFF" opacity="0.42"/>
+    <circle cx="128" cy="177" r="0.7" fill="#FFFFFF" opacity="0.71"/>
+    <circle class="tw" style="animation-duration:5.7s;animation-delay:0.3s" cx="861" cy="65" r="1.1" fill="#FFFFFF" opacity="0.65"/>
+    <circle cx="761" cy="265" r="0.5" fill="#FFFFFF" opacity="0.55"/>
+    <circle cx="157" cy="314" r="0.6" fill="#BFD4FF" opacity="0.68"/>
+    <circle cx="513" cy="3" r="0.5" fill="#FFFFFF" opacity="0.68"/>
+    <circle cx="1002" cy="186" r="0.6" fill="#FFD9B8" opacity="0.43"/>
+    <circle class="tw" style="animation-duration:3.4s;animation-delay:0.5s" cx="370" cy="288" r="1.4" fill="#FFFFFF" opacity="0.89"/>
+    <circle cx="936" cy="283" r="0.8" fill="#FFFFFF" opacity="0.91"/>
+    <circle class="tw" style="animation-duration:5.1s;animation-delay:1.7s" cx="284" cy="52" r="1.4" fill="#FFFFFF" opacity="0.88"/>
+    <circle cx="1117" cy="257" r="1.4" fill="#FFFFFF" opacity="0.51"/>
+    <circle cx="130" cy="279" r="1.4" fill="#BFD4FF" opacity="0.48"/>
+    <circle cx="552" cy="98" r="1.4" fill="#FFFFFF" opacity="0.48"/>
+    <circle cx="478" cy="89" r="0.5" fill="#FFFFFF" opacity="0.56"/>
+    <circle class="tw" style="animation-duration:5.6s;animation-delay:1.3s" cx="611" cy="217" r="1.4" fill="#FFE8C2" opacity="0.55"/>
+    <circle cx="697" cy="315" r="0.5" fill="#FFFFFF" opacity="0.71"/>
+    <circle cx="415" cy="252" r="0.8" fill="#FFE8C2" opacity="0.42"/>
+    <circle cx="1079" cy="61" r="0.5" fill="#FFD9B8" opacity="0.35"/>
+    <circle class="tw" style="animation-duration:4.8s;animation-delay:1.7s" cx="1111" cy="172" r="1.1" fill="#FFFFFF" opacity="0.57"/>
+    <circle cx="377" cy="271" r="1.1" fill="#FFFFFF" opacity="0.65"/>
+    <circle cx="391" cy="223" r="0.9" fill="#FFFFFF" opacity="0.47"/>
+    <circle cx="455" cy="239" r="0.6" fill="#FFFFFF" opacity="0.59"/>
+    <circle cx="1000" cy="97" r="0.6" fill="#FFD9B8" opacity="0.82"/>
+    <circle cx="728" cy="103" r="0.8" fill="#BFD4FF" opacity="0.76"/>
+    <circle class="tw" style="animation-duration:4.8s;animation-delay:3.1s" cx="613" cy="254" r="1.4" fill="#FFFFFF" opacity="0.75"/>
+    <circle cx="112" cy="305" r="0.6" fill="#FFFFFF" opacity="0.48"/>
+    <circle cx="239" cy="8" r="0.6" fill="#BFD4FF" opacity="0.72"/>
+    <circle class="tw" style="animation-duration:3.9s;animation-delay:0.7s" cx="922" cy="146" r="1.1" fill="#FFFFFF" opacity="0.78"/>
+    <circle class="tw" style="animation-duration:5.3s;animation-delay:3.5s" cx="825" cy="286" r="1.4" fill="#FFFFFF" opacity="0.82"/>
+    <circle cx="557" cy="178" r="1.4" fill="#FFFFFF" opacity="0.62"/>
+    <circle cx="801" cy="316" r="0.9" fill="#FFFFFF" opacity="0.92"/>
+    <circle class="tw" style="animation-duration:5.6s;animation-delay:3.7s" cx="735" cy="230" r="0.9" fill="#FFD9B8" opacity="0.85"/>
+    <circle cx="570" cy="83" r="0.6" fill="#FFFFFF" opacity="0.81"/>
+    <circle cx="626" cy="201" r="0.7" fill="#BFD4FF" opacity="0.40"/>
+    <circle cx="343" cy="87" r="0.7" fill="#FFE8C2" opacity="0.40"/>
+    <circle cx="181" cy="123" r="0.6" fill="#FFFFFF" opacity="0.39"/>
+    <circle cx="489" cy="174" r="0.8" fill="#FFFFFF" opacity="0.47"/>
+    <circle cx="504" cy="290" r="0.9" fill="#FFFFFF" opacity="0.86"/>
+    <circle cx="456" cy="2" r="0.7" fill="#FFFFFF" opacity="0.80"/>
+    <circle cx="1024" cy="305" r="0.8" fill="#FFE8C2" opacity="0.80"/>
+    <circle cx="655" cy="193" r="0.6" fill="#BFD4FF" opacity="0.48"/>
+    <circle cx="523" cy="9" r="0.7" fill="#FFD9B8" opacity="0.78"/>
+    <circle class="tw" style="animation-duration:4.5s;animation-delay:0.1s" cx="1009" cy="294" r="0.9" fill="#FFE8C2" opacity="0.37"/>
+    <circle cx="771" cy="43" r="0.8" fill="#FFFFFF" opacity="0.38"/>
+    <circle cx="455" cy="68" r="0.7" fill="#FFFFFF" opacity="0.81"/>
+    <circle class="tw" style="animation-duration:2.6s;animation-delay:2.7s" cx="455" cy="241" r="1.4" fill="#FFD9B8" opacity="0.50"/>
+    <circle cx="1200" cy="112" r="1.1" fill="#FFFFFF" opacity="0.82"/>
+    <circle cx="905" cy="304" r="0.6" fill="#FFFFFF" opacity="0.72"/>
+    <circle cx="286" cy="152" r="0.5" fill="#FFFFFF" opacity="0.63"/>
+    <circle class="tw" style="animation-duration:3.6s;animation-delay:2.9s" cx="307" cy="118" r="0.9" fill="#FFFFFF" opacity="0.82"/>
+    <circle cx="1115" cy="184" r="0.8" fill="#FFD9B8" opacity="0.91"/>
+    <circle cx="238" cy="189" r="1.4" fill="#FFFFFF" opacity="0.41"/>
+    <circle cx="1020" cy="192" r="0.5" fill="#FFFFFF" opacity="0.56"/>
+    <circle class="tw" style="animation-duration:4.2s;animation-delay:2.2s" cx="514" cy="119" r="0.9" fill="#FFFFFF" opacity="0.36"/>
+    <circle cx="435" cy="285" r="0.8" fill="#FFFFFF" opacity="0.61"/>
+    <circle cx="881" cy="309" r="0.7" fill="#FFE8C2" opacity="0.81"/>
+    <circle class="tw" style="animation-duration:5.8s;animation-delay:1.4s" cx="558" cy="264" r="0.9" fill="#FFFFFF" opacity="0.54"/>
+    <circle class="tw" style="animation-duration:3.6s;animation-delay:2.4s" cx="541" cy="240" r="0.9" fill="#FFD9B8" opacity="0.55"/>
+    <circle cx="426" cy="83" r="0.7" fill="#FFFFFF" opacity="0.68"/>
+    <circle cx="620" cy="61" r="0.6" fill="#FFD9B8" opacity="0.64"/>
+    <circle class="tw" style="animation-duration:3.5s;animation-delay:2.0s" cx="910" cy="221" r="1.1" fill="#BFD4FF" opacity="0.62"/>
+    <circle cx="292" cy="212" r="0.7" fill="#BFD4FF" opacity="0.68"/>
+    <circle class="tw" style="animation-duration:3.6s;animation-delay:1.2s" cx="413" cy="319" r="0.9" fill="#FFFFFF" opacity="0.56"/>
+    <circle cx="866" cy="101" r="1.1" fill="#FFE8C2" opacity="0.92"/>
+    <circle cx="230" cy="236" r="0.7" fill="#FFE8C2" opacity="0.71"/>
+    <circle cx="1177" cy="266" r="0.7" fill="#FFFFFF" opacity="0.57"/>
+    <circle cx="363" cy="227" r="0.6" fill="#FFFFFF" opacity="0.38"/>
+    <circle cx="65" cy="93" r="0.6" fill="#BFD4FF" opacity="0.41"/>
+    <circle cx="15" cy="91" r="0.8" fill="#BFD4FF" opacity="0.55"/>
+    <circle class="tw" style="animation-duration:4.2s;animation-delay:2.9s" cx="1159" cy="81" r="1.4" fill="#BFD4FF" opacity="0.42"/>
+    <circle class="tw" style="animation-duration:4.5s;animation-delay:2.1s" cx="824" cy="49" r="1.4" fill="#FFFFFF" opacity="0.40"/>
+    <circle cx="715" cy="198" r="1.4" fill="#FFE8C2" opacity="0.58"/>
+    <circle cx="357" cy="188" r="0.8" fill="#FFFFFF" opacity="0.69"/>
+    <circle cx="72" cy="307" r="0.5" fill="#FFFFFF" opacity="0.73"/>
+    <circle cx="318" cy="26" r="0.6" fill="#FFFFFF" opacity="0.68"/>
+    <circle class="tw" style="animation-duration:5.0s;animation-delay:3.5s" cx="188" cy="131" r="1.1" fill="#BFD4FF" opacity="0.52"/>
+    <circle cx="545" cy="220" r="0.7" fill="#FFFFFF" opacity="0.61"/>
+    <circle cx="653" cy="207" r="0.7" fill="#FFFFFF" opacity="0.39"/>
+    <circle class="tw" style="animation-duration:3.6s;animation-delay:2.0s" cx="199" cy="98" r="1.1" fill="#FFFFFF" opacity="0.61"/>
+    <circle cx="327" cy="173" r="0.8" fill="#FFFFFF" opacity="0.71"/>
+    <circle class="tw" style="animation-duration:4.9s;animation-delay:4.3s" cx="1067" cy="235" r="0.9" fill="#FFFFFF" opacity="0.37"/>
+    <circle cx="705" cy="7" r="1.4" fill="#FFFFFF" opacity="0.70"/>
+    <circle cx="210" cy="166" r="0.8" fill="#FFFFFF" opacity="0.46"/>
+    <circle cx="702" cy="203" r="0.8" fill="#FFFFFF" opacity="0.63"/>
+    <circle cx="490" cy="103" r="0.5" fill="#FFFFFF" opacity="0.55"/>
+    <circle cx="832" cy="92" r="0.8" fill="#FFE8C2" opacity="0.37"/>
+    <circle cx="106" cy="81" r="0.5" fill="#FFD9B8" opacity="0.87"/>
+    <circle class="tw" style="animation-duration:4.3s;animation-delay:3.1s" cx="990" cy="0" r="1.4" fill="#FFE8C2" opacity="0.63"/>
+    <circle cx="598" cy="141" r="0.5" fill="#FFFFFF" opacity="0.51"/>
+    <circle cx="157" cy="92" r="1.1" fill="#BFD4FF" opacity="0.42"/>
+    <circle cx="731" cy="77" r="0.6" fill="#FFFFFF" opacity="0.68"/>
+    <circle class="tw" style="animation-duration:5.4s;animation-delay:2.5s" cx="663" cy="30" r="1.4" fill="#FFFFFF" opacity="0.63"/>
+    <circle cx="860" cy="163" r="0.7" fill="#FFD9B8" opacity="0.85"/>
+    <circle cx="1176" cy="78" r="0.9" fill="#FFFFFF" opacity="0.58"/>
+    <circle cx="610" cy="281" r="1.4" fill="#FFFFFF" opacity="0.52"/>
+    <circle class="tw" style="animation-duration:3.5s;animation-delay:2.9s" cx="498" cy="299" r="0.9" fill="#FFFFFF" opacity="0.84"/>
+    <circle cx="1199" cy="157" r="0.6" fill="#BFD4FF" opacity="0.67"/>
+    <circle class="tw" style="animation-duration:3.2s;animation-delay:3.5s" cx="414" cy="177" r="0.9" fill="#FFD9B8" opacity="0.62"/>
+    <circle cx="686" cy="75" r="1.4" fill="#FFD9B8" opacity="0.38"/>
+    <circle cx="846" cy="260" r="0.8" fill="#FFFFFF" opacity="0.65"/>
+    <circle cx="44" cy="161" r="0.9" fill="#FFFFFF" opacity="0.87"/>
+    <circle cx="528" cy="168" r="0.8" fill="#FFFFFF" opacity="0.78"/>
+    <circle cx="492" cy="210" r="0.6" fill="#FFFFFF" opacity="0.63"/>
+    <circle cx="1163" cy="108" r="1.1" fill="#FFD9B8" opacity="0.74"/>
+    <circle cx="1023" cy="275" r="0.8" fill="#FFFFFF" opacity="0.73"/>
+    <circle class="tw" style="animation-duration:4.9s;animation-delay:1.4s" cx="1065" cy="156" r="0.9" fill="#FFFFFF" opacity="0.72"/>
+    <circle cx="273" cy="29" r="0.5" fill="#FFFFFF" opacity="0.62"/>
+    <circle cx="833" cy="289" r="0.5" fill="#FFFFFF" opacity="0.83"/>
+    <circle cx="352" cy="120" r="0.6" fill="#FFFFFF" opacity="0.67"/>
+    <circle cx="679" cy="254" r="0.6" fill="#FFFFFF" opacity="0.40"/>
+    <circle cx="1045" cy="198" r="0.6" fill="#BFD4FF" opacity="0.90"/>
+    <circle cx="172" cy="148" r="0.7" fill="#BFD4FF" opacity="0.50"/>
+    <circle cx="11" cy="257" r="0.7" fill="#FFE8C2" opacity="0.44"/>
+    <circle class="tw" style="animation-duration:3.4s;animation-delay:4.2s" cx="530" cy="111" r="0.9" fill="#FFFFFF" opacity="0.73"/>
+    <circle cx="239" cy="123" r="0.8" fill="#FFFFFF" opacity="0.49"/>
+    <circle cx="686" cy="184" r="1.1" fill="#FFFFFF" opacity="0.36"/>
+    <circle cx="475" cy="3" r="1.4" fill="#FFFFFF" opacity="0.90"/>
+    <circle class="tw" style="animation-duration:4.7s;animation-delay:3.1s" cx="999" cy="289" r="1.4" fill="#FFFFFF" opacity="0.71"/>
+    <circle cx="813" cy="231" r="1.1" fill="#FFFFFF" opacity="0.73"/>
+    <g class="flare" style="animation-delay:0s" transform="translate(120 40)"><circle r="1.6" fill="#FFF"/><path d="M-7 0H7M0-7V7" stroke="#FFF" stroke-opacity=".55" stroke-width=".8"/></g>
+    <g class="flare" style="animation-delay:1.7s" transform="translate(560 34)"><circle r="1.6" fill="#FFF"/><path d="M-7 0H7M0-7V7" stroke="#FFF" stroke-opacity=".55" stroke-width=".8"/></g>
+    <g class="flare" style="animation-delay:3.1s" transform="translate(980 292)"><circle r="1.6" fill="#FFF"/><path d="M-7 0H7M0-7V7" stroke="#FFF" stroke-opacity=".55" stroke-width=".8"/></g>
+    <g class="flare" style="animation-delay:2.3s" transform="translate(600 290)"><circle r="1.6" fill="#FFF"/><path d="M-7 0H7M0-7V7" stroke="#FFF" stroke-opacity=".55" stroke-width=".8"/></g>
+
+    <!-- shooting stars -->
+    <g class="s1"><g transform="translate(1100 10) rotate(158)"><rect x="0" y="-1" width="130" height="2" rx="1" fill="url(#tail)" transform="scale(-1 1)"/><circle r="1.8" fill="#FFF"/></g></g>
+    <g class="s2"><g transform="translate(760 0) rotate(158)"><rect x="0" y="-1" width="90" height="1.5" rx="1" fill="url(#tail)" transform="scale(-1 1)"/><circle r="1.4" fill="#FFF"/></g></g>
+
+    <!-- planet behind the terminal -->
+    <g transform="translate(1128 92) scale(.72)">
+      <g class="drift">
+        <circle r="128" fill="url(#atmo)"/>
+        <ellipse rx="170" ry="26" fill="none" stroke="url(#ring)" stroke-width="5" transform="rotate(-18)" opacity=".55"/>
+        <circle r="96" fill="url(#planet)"/>
+        <g clip-path="url(#planetclip)" opacity=".28">
+          <ellipse cx="-10" cy="-30" rx="140" ry="9" fill="#FFE1C2" transform="rotate(-18)"/>
+          <ellipse cx="0" cy="10" rx="140" ry="6" fill="#7C2D12" transform="rotate(-18)"/>
+          <ellipse cx="10" cy="44" rx="140" ry="11" fill="#FFB27A" transform="rotate(-18)"/>
+        </g>
+        <path d="M-170 0a170 26 0 0 0 340 0" fill="none" stroke="url(#ring)" stroke-width="5" transform="rotate(-18)"/>
+      </g>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="319" rx="16" fill="none" stroke="#2A2F45"/>
+
+  <!-- identity -->
+  <g class="r1"><text x="74" y="70" class="mono" font-size="13" letter-spacing="4" fill="#8B949E">// HELLO, I'M</text></g>
+  <g class="r2">
+    <text x="72" y="150" font-size="92" font-weight="800" letter-spacing="6" class="sans" fill="url(#name)">AZZY</text>
+    <g clip-path="url(#nameclip)"><g transform="skewX(-20)"><rect class="shine" x="40" y="40" width="140" height="130" fill="url(#shine)"/></g></g>
+  </g>
+  <g class="r3">
+    <text x="74" y="194" class="sans" font-size="24" font-weight="600" fill="#E6EDF3">Backend Engineer <tspan fill="#FF8A3D">·</tspan> Server Infrastructure</text>
+    <text x="74" y="224" class="sans" font-size="15" fill="#9AA4B2">Go APIs, payments and Linux servers for web and mobile products.</text>
+  </g>
+  <g class="r4 mono" font-size="12">
+    <g transform="translate(74 254)"><rect width="46" height="26" rx="13" fill="#00ADD8" fill-opacity=".12" stroke="#00ADD8" stroke-opacity=".55"/><text x="23" y="17" text-anchor="middle" fill="#7FD6EC">Go</text></g>
+    <g transform="translate(130 254)"><rect width="90" height="26" rx="13" fill="#3FA9F5" fill-opacity=".12" stroke="#3FA9F5" stroke-opacity=".55"/><text x="45" y="17" text-anchor="middle" fill="#8CCBFA">Dart/Flutter</text></g>
+    <g transform="translate(230 254)"><rect width="56" height="26" rx="13" fill="#FF8A3D" fill-opacity=".12" stroke="#FF8A3D" stroke-opacity=".55"/><text x="28" y="17" text-anchor="middle" fill="#FFC38A">Linux</text></g>
+    <g transform="translate(296 254)"><rect width="66" height="26" rx="13" fill="#2496ED" fill-opacity=".12" stroke="#2496ED" stroke-opacity=".55"/><text x="33" y="17" text-anchor="middle" fill="#8CC8F5">Docker</text></g>
+    <g transform="translate(372 254)"><rect width="56" height="26" rx="13" fill="#2EBF5E" fill-opacity=".12" stroke="#2EBF5E" stroke-opacity=".55"/><text x="28" y="17" text-anchor="middle" fill="#7EDB9C">nginx</text></g>
+    <g transform="translate(438 254)"><rect width="90" height="26" rx="13" fill="#6F8FF0" fill-opacity=".12" stroke="#6F8FF0" stroke-opacity=".55"/><text x="45" y="17" text-anchor="middle" fill="#A9BCF7">PostgreSQL</text></g>
+  </g>
+
+  <!-- terminal -->
+  <g transform="translate(616 26)">
+    <rect width="444" height="266" rx="12" fill="#070A17" stroke="#2A2F45"/>
+    <path d="M0 12a12 12 0 0 1 12-12h420a12 12 0 0 1 12 12v22H0z" fill="#11152A"/>
+    <line x1="0" y1="34" x2="444" y2="34" stroke="#2A2F45"/>
+    <circle cx="20" cy="17" r="5.5" fill="#FF5F57"/>
+    <circle cx="38" cy="17" r="5.5" fill="#FEBC2E"/>
+    <circle cx="56" cy="17" r="5.5" fill="#28C840"/>
+    <text x="222" y="21" text-anchor="middle" class="mono" font-size="11" fill="#8B949E">azzy@orbit: ~</text>
+    <g class="mono" font-size="13" transform="translate(20 0)">
+      <g class="o" style="animation-delay:1.0s"><text y="62" fill="#FF8A3D">$</text><text x="18" y="62" fill="#E6EDF3">whoami</text><rect class="cv" style="animation:reveal 0.5s steps(6) 1.0s both" x="16" y="48" width="54" height="20" fill="#070A17"/></g>
+      <g class="o" style="animation-delay:1.7s"><text y="84" xml:space="preserve"><tspan fill="#8B949E">azzy — backend · devops · Uzbekistan</tspan></text></g>
+      <g class="o" style="animation-delay:2.1s"><text y="110" fill="#FF8A3D">$</text><text x="18" y="110" fill="#E6EDF3">systemctl status api</text><rect class="cv" style="animation:reveal 1.0s steps(20) 2.1s both" x="16" y="96" width="166" height="20" fill="#070A17"/></g>
+      <g class="o" style="animation-delay:3.3s"><text y="132" xml:space="preserve"><tspan class="dot" fill="#3FB950">●</tspan><tspan fill="#8B949E"> api.service — </tspan><tspan fill="#3FB950">active (running)</tspan></text></g>
+      <g class="o" style="animation-delay:3.7s"><text y="158" fill="#FF8A3D">$</text><text x="18" y="158" fill="#E6EDF3">docker compose ps</text><rect class="cv" style="animation:reveal 0.8s steps(17) 3.7s both" x="16" y="144" width="142" height="20" fill="#070A17"/></g>
+      <g class="o" style="animation-delay:4.7s"><text y="180" xml:space="preserve"><tspan fill="#8B949E">api </tspan><tspan fill="#3FB950">up</tspan><tspan fill="#8B949E">    postgres </tspan><tspan fill="#3FB950">up</tspan><tspan fill="#8B949E">    nginx </tspan><tspan fill="#3FB950">up</tspan><tspan fill="#8B949E">    bot </tspan><tspan fill="#3FB950">up</tspan></text></g>
+      <g class="o" style="animation-delay:5.1s"><text y="206" fill="#FF8A3D">$</text><text x="18" y="206" fill="#E6EDF3">curl -s api/payments/health</text><rect class="cv" style="animation:reveal 1.1s steps(27) 5.1s both" x="16" y="192" width="222" height="20" fill="#070A17"/></g>
+      <g class="o" style="animation-delay:6.4s"><text y="228" xml:space="preserve"><tspan fill="#E6EDF3">{"payme":</tspan><tspan fill="#3FB950">"ok"</tspan><tspan fill="#E6EDF3">,"latency_ms":</tspan><tspan fill="#FF8A3D">42</tspan><tspan fill="#E6EDF3">}</tspan></text></g>
+      <g class="o" style="animation-delay:6.8s"><text y="250" fill="#FF8A3D">$</text><rect class="cur" x="18" y="238" width="8" height="15" fill="#FF8A3D"/></g>
+    </g>
+  </g>
+</svg>
